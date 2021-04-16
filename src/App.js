@@ -5,7 +5,6 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import flash from 'connect-flash';
 import Home from './Home';
 import exhbs from 'express-handlebars';
-import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme';
 
 const [theme, setTheme] = useState('light');
@@ -115,7 +114,7 @@ server.listen(process.env.PORT || 3000, function () {
 
 // The function that toggles between themes
 
- 
+
   function toggleTheme() {
   if (theme === 'light') {
     setTheme('dark');
