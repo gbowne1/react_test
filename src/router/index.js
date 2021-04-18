@@ -1,5 +1,4 @@
-import { app as appController } from '/router/controllers/appController.js';
-import { appItems as appItemsController } from '/controllers';
+
 
 export default (app) => {
   app.get('/api', (req, res) => res.status(200).send({

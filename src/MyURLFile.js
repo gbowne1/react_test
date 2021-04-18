@@ -2,6 +2,7 @@
 import * as React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import LaunchIcon from '@material-ui/icons/Launch';
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles({
     link: {
@@ -22,5 +23,14 @@ function MyUrlField({ record = {}, source }) {
         </a>
     );
 }
+
+//const UrlField = ({ record = {}, source }) => (
+//<a href={recprd[source]}>{record[source]}</a>
+//);
+
+UrlField.propTypes = {
+  record: PropTypes.object,
+  source: PropTypes.string.isRequired
+};
 
 export default MyUrlField;

@@ -9,7 +9,8 @@ import { COUNTRIES } from './exports';
 import PropTypes from 'prop-types';
 import { addContact, editContact, getContacts } from './requests';
 import { connect } from 'react-redux';
-import { setContacts } from './actionCreators'; const schema = yup.object({
+import { setContacts } from './actionCreators';
+const schema = yup.object({
     firstName: yup.string().required('First name is required'),
     lastName: yup.string().required('Last name is required'),
     address: yup.string().required('Address is required'),
@@ -111,7 +112,7 @@ import { setContacts } from './actionCreators'; const schema = yup.object({
                                     <InputGroup>
                                         <Form.Control>
                                         </Form.Control>
-    
+
 type="text"
 placeholder="Address"
 aria-describedby="inputGroupPrepend"
@@ -229,7 +230,7 @@ isInvalid={touched.address && errors.address}
             </Formik>
         </div>
     );
-} 
+}
 
 ContactForm.propTypes = {
     edit: PropTypes.bool,
